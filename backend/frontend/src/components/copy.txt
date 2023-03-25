@@ -1,0 +1,15 @@
+let orders = await order.find()
+    const totalOrders = await order.find().count()
+    let page = parseInt(req.query.page) || 1
+    if(page < 1) {page = 1}
+    const pageSize = parseInt(req.query.limit) || 4
+    const pages = Math.ceil(totalOrders / pageSize)
+    if(page > pages) {page = pages}
+    const skip = (page - 1) * pageSize
+    const _orders = await order.find().skip(skip).limit(pageSize)
+    const result = _orders
+    if(orders) {return res.json({
+        orders: orders, total: totalOrders, page: page, pageSize: pageSize,
+        skip: skip, pages: pages, result: result, resultLength: result.length
+    })}
+    else {res.status(401).json({message: "No Order Found", status: 401})}

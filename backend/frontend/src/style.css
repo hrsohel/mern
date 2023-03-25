@@ -1,0 +1,123 @@
+*{
+    text-decoration:  none;
+    text-transform: capitalize;
+}
+.nav-active {
+    color: green;
+}
+.home {
+    background: url('./spaghetti-1932466_1920.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home .home-content h1, 
+.home .home-content h3 {
+    text-shadow: 0 .3rem .5rem rgba(0 ,0, 0, .3);
+}
+.home .home-content a {
+    font-size: 1.5rem;
+    color: black;
+}
+.update-profile {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100vh;
+    background-color: lightgray;
+}
+.update-profile .fa-times {
+    position: absolute;
+    right: 0; top: 0;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+.update-profile .picShow {
+    background-color: white;
+    width: 200px; height: 200px; border-radius: 50%;
+}
+.picShow img {
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.order-note-btn {
+    position: relative;
+    cursor: none;
+}
+.order-note {
+    width: 1.5rem; height: 1.5rem;
+    background: red;
+    border-radius: 50%;
+    line-height: 1.5rem;
+    position: absolute;
+    right: -.5rem; top: -.5rem;
+}
+.parent-star {
+    position: relative;
+}
+.parent-star span {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.children-star {
+    position: absolute;
+    left: 0; bottom: -4.5rem;
+    background: black;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+.children-star i {
+    margin-left: .5rem;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+}
+.single-Rate {
+    color: orange;
+}
+.single-Rate i {
+    margin-left: .5rem;
+}
+.single-Rate span {
+    color: #555;
+}
+.row .col-4 .single-Rate {
+    text-align: center;
+}
+/* .rating-container {
+    position: relative;
+} */
+.rating-container .rating {
+    width: 50%;
+    /* position: absolute;
+    bottom: -3.5rem;
+    left: 0; right: 0; */
+    font-size: 1rem;
+    padding: .5rem;
+    border-radius: .5rem;
+    background: #eee;
+}
+.rating-container .rating i {
+    margin-left: .5rem;
+    color: #999;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.stars i, .stars span {
+    font-size: 1.2rem;
+    margin-left: .3rem;
+    font-weight: bold;
+}
+.footer {
+    color: white;
+}
+.footer a {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
