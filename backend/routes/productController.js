@@ -58,7 +58,7 @@ exports.deleteCategory = expressAsync(async(req, res) => {
     else {return res.status(401).json({message: "Can't Delete Item", status: 401})}
 })
 
-exports.addFood = expressAsync(async(req, res) => {
+exports.addFood = expressAsync(async(req, res) => { 
     const {foodName, desc, category, price, radio} = req.body
     const image = req.files.img
     const ext = image.mimetype.split("/")[1]
